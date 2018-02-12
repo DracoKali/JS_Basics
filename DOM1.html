@@ -1,0 +1,29 @@
+<html>
+
+<body>
+    <h1>Life Aspiration</h1>
+    <ul id="Dream Cars">
+    </ul>
+    <script>
+        function appendList(array, id) {
+            for (var i = 0; i < array.length; i++) {
+                let new_array = document.createElement("li")
+                new_array.innerHTML = array[i];
+                document.getElementById("Dream Cars").appendChild(new_array);
+            }
+        }
+         function superAppend(array, element, id) {
+                for (var i = 0; i < array.length; i++) {
+                    let new_array = document.createElement(element)
+                    new_array.innerHTML = array[i];
+                    document.getElementById("Dream Cars").appendChild(new_array);
+                }
+            }
+        var brands = ["Toyota", "Jaguar", "Porache", "Lancia", "BMW", "Audi", "Mazda"];
+        var target_id = "Dream Cars";
+        // appendList(brands, target_id);
+        superAppend(brands, "li", target_id);
+    </script>
+</body>
+
+</html>
